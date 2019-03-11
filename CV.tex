@@ -25,7 +25,7 @@
 \newcommand{\CVAuthor}{Xingfan Xia}
 \newcommand{\CVTitle}{Xingfan's CV}
 \newcommand{\CVNote}{CV compiled on {\today}}
-\newcommand{\CVWebpage}{http://xiax.ai}
+\newcommand{\CVWebpage}{https://xiax.ai}
 
 % PDF settings and properties.
 \hypersetup{
@@ -61,8 +61,8 @@ breaklinks}
 \Title{\CVAuthor}
 
 \begin{SubTitle}
-\href{https://www.google.com/maps/place/300+N+College+Street,+Northfield,+Minnesota+55057}
-{300 N College Street, Northfield, Minnesota 55057}
+\href{https://www.google.com/maps/place/855+Brannan,+San+Francisco,+CA+94103}
+{855 Brannan Street, San Francisco CA 94103}
 \par
 \href{mailto:xingfanxia@gmail.com}
 {xingfanxia@gmail.com}
@@ -111,9 +111,59 @@ Related Course Works: Human-centered Computing, Operating Systems, Database Syst
 Experience}
 {Work Experience}
 {PDF:WorkExperience}
-
 \Entry
-\href{http://hq.vevo.com/}
+\href{https://press.airbnb.com/about-us/}
+{\textbf{Airbnb}},
+San Francisco, CA
+
+\Gap
+\BulletItem
+Software Engineer
+\hfill
+\DatestampYM{2019}{1} --
+Present
+\begin{Detail}
+\SubBulletItem
+Develop various defense logic to protect Airbnb users from fraudsters.
+\SubBulletItem
+Build data foundation infrastructure to provide signals to detect potential fraud.
+\end{Detail}
+
+\BigGap
+\Entry
+\href{https://lino.network/}
+{\textbf{Lino Network}},
+Cupertino, CA
+
+\Gap
+\BulletItem
+Software Engineer
+\hfill
+\DatestampYM{2018}{03} --
+\DatestampYM{2018}{10}
+
+\newline
+(Platform \& Infrastructure)
+\begin{Detail}
+\SubBulletItem
+Performed a major upgrade of Dlive, largest live streaming DApp on Blockchain; implemented a discord-like feature with VueJS, GraphQL, and Web Socket. Dramatically increased user retention rate.
+\SubBulletItem
+Architected and developed a video platform that includes ingest, transcoding, and distribution of video files in Golang with AWS S3, SQS, and Cloudfront from scratch. Serving terabytes of video content in different qualities globally.
+\SubBulletItem
+Built GPU-accelerated transcoding cluster for the video platform in Golang with FFMPEG and Nvidia CUDA. Increased transcoding efficiency by 15 times and expanded the supported video formats and codecs.
+\SubBulletItem
+Improved users' experience uploading video by deploying video ingest service in 7 major regions of the world to reduce uploading wait time and the possibility of transfer errors with AWS API Gateway and AWS Lambda.
+\SubBulletItem
+Secured content on the Dlive platform by implementing signed-cookie protection on AWS Clooudfront in Python to defend third-party malicious attack.
+\SubBulletItem
+Designed and implemented data pipeline at Lino from scratch to monitor user behaviors, user QoE metrics, and streaming service robustness with AWS Kinesis, AWS Lambda, ELK Stack, and Splunk. Performed real-time analytics of gigabytes of logs from users and aggregated into comprehensive reports and dashboards that provides both technical and business insides.
+\SubBulletItem
+Researched popular live streaming protocols including HLS, MPEG-DASH, Web-RTC and prototyped their implementations.
+\end{Detail}
+
+\BigGap
+\Entry
+\href{https://hq.vevo.com/}
 {\textbf{Vevo LLC}},
 San Francisco, CA
 
@@ -127,54 +177,13 @@ Software Engineer Intern
 (Data \& Machine Learning Team)
 \begin{Detail}
 \SubBulletItem
-Designed and implemented an Q\&A chatbot using AWS Lambda, Python and AWS Lex. Deployed the chatbot on Facebook Messenger and Slack.
+Designed and implemented a Q\&A chatbot using AWS Lambda, Python and AWS Lex. Deployed the chatbot on Facebook Messenger and Slack.
 \SubBulletItem
 Built a multi-seed recommendation engine. Deployed as an API service, a Web App, and a tvOS App as POC demos.
 \SubBulletItem
 Analyzed visuals of music videos, generated playlists based on similar visual elements grouped by LDA topic modeling.
 \SubBulletItem
 Deployed a Jupyterhub system on an AWS P2 instance to facilitate team's research and exploratory works related to machine learning and deep learning. Typically made model training 6 times faster.
-\end{Detail}
-
-\BigGap
-\Entry
-\href{http://stoooges.com/en/}
-{\textbf{Stoooges Education Consulting}},
-Hangzhou, China
-
-
-\Gap
-\BulletItem
-Web Developer Intern
-\hfill
-\DatestampYM{2016}{07} --
-\DatestampYM{2016}{09}
-\begin{Detail}
-\SubBulletItem
-Prototyped an educational Wiki with CTO with open-sourced WordPress framework.
-\SubBulletItem
-Developed Python web crawlers to scrape information for the Wiki.
-\SubBulletItem
-Extracted data from company archives files for better archive management.
-\end{Detail}
-
-\BigGap
-\Entry
-\href{https://www.carleton.edu/}
-{\textbf{Carleton College}},
-Northfield, MN
-
-\Gap
-\BulletItem
-Academic Technology Engineer
-\hfill
-\DatestampYM{2016}{11} --
-Present
-\begin{Detail}
-\SubBulletItem
-Developed Python web crawlers to scrape course information from Carleton’s learning management system.
-\SubBulletItem
-Implemented a rendering engine to convert scraped data as PDF documents to provide convenient access for faculty.
 \end{Detail}
 
 %%%%%%%%%%%%%%
@@ -187,78 +196,108 @@ Implemented a rendering engine to convert scraped data as PDF documents to provi
 {PDF:Projects}
 
 \Entry
-\href{https://moegirl.org/Mainpage}
-{\textbf{Moegirl Wiki}}
-\newline
-(Open Source Wiki Based on MediaWiki)
+\href{https://github.com/xingfanxia/comps_ediscovery}
+{\textbf{Tree Discovery}}
+% \newline
+% (An implementation of the Random Forest Algorithm)
 \Gap
 \BulletItem
-Contributor
+Lead
 \hfill
-\DatestampYM{2016}{03} --
-Present
+\DatestampYM{2017}{10} --
+\DatestampYM{2018}{05}
+
 \begin{Detail}
 \SubBulletItem
-Worked with a team of about 20 contributors to maintain day-to-day running of the Wiki.
+Implemented the Random Forest Algorithm from scratch in Python with a team of 6.
 \SubBulletItem
-Collaborated with 3 other contributors, developed a plugin to auto resize customized user avatar and optimized image storage of user-uploaded images.
+Processed the raw and messy ENRON email dataset into a usable training set and test set with TF-IDF, DB-SCAN, and LSA topic aggregation.
+% \SubBulletItem
+% Reduced the training speed of a typical tree from 2 minutes down to less than 10 seconds.
 \SubBulletItem
-Prototyped a redesign of the main page of the iOS app with the lead iOS developer.
+Tested the performance of the implementation against the ENRON dataset, our F1 Score is comparable to the results presented at TREC Conference 2011.
+\SubBulletItem
+Designed and built a demo e-discovery product that utilizes the idea of semi-supervised learning, allow users to tag relevant documents as training set in each iteration of predictions to continuously improve the model's accuracy and recall.
 \end{Detail}
 
-\BigGap
-\Entry
-\href{https://steamcommunity.com/sharedfiles/filedetails/?id=440115357}
-{\textbf{Dota IMBA}}
-\newline
-(Custom Game Based on Popular Online Multiplayer Game Dota2 with Six Million Subscribers)
+% \BigGap
+% \Entry
+% \href{https://github.com/mahu-search}
+% {\textbf{Mahu}}
 
-\Gap
-\BulletItem
-Contributor
-\hfill
-\DatestampYM{2017}{07} --
-Present
-\begin{Detail}
-\SubBulletItem
-Applied routine patch periodicly for bug fixes and better balance.
-\SubBulletItem
-Occasionally implemented Hero rework based on the community feedback to improve playability.
-\SubBulletItem
-Communicated with active players on discord channels to collect critiques and ideas for improvement.
-\end{Detail}
+% \Gap
+% \BulletItem
+% Contributor
+% \hfill
+% \DatestampYM{2017}{07} --
+% \DatestampYM{2018}{03}
+
+% \begin{Detail}
+% \SubBulletItem
+% Built a web app with VueJS and bulma that allows developers from China to perform searches related to coding and the app will crawl aggregate results from sites like StackOverflow, SuperUser, Stack Exchange, etc. 
+% \SubBulletItem
+% Integrated various translation API avialble to empower users who are not proficient with English.
+% \end{Detail}
+
+% \BigGap
+
+% \Entry
+% \href{https://moegirl.org/Mainpage}
+% {\textbf{Moegirl Wiki}}
+% \newline
+% (Open Source Wiki Based on MediaWiki)
+% \Gap
+% \BulletItem
+% Contributor
+% \hfill
+% \DatestampYM{2016}{03} --
+% \DatestampYM{2018}{03}
+% \begin{Detail}
+% \SubBulletItem
+% Worked with a team of about 20 contributors to maintain day-to-day running of the Wiki.
+% \SubBulletItem
+% Prototyped a redesign of the main page of the iOS app with the lead iOS developer.
+% \end{Detail}
+
+% \BigGap
+% \Entry
+% \href{https://steamcommunity.com/sharedfiles/filedetails/?id=440115357}
+% {\textbf{Dota IMBA}}
+% \newline
+% (Custom Game Based on Popular Online Multiplayer Game Dota2 with Six Million Subscribers)
+
+% \Gap
+% \BulletItem
+% Contributor
+% \hfill
+% \DatestampYM{2017}{07} --
+% \DatestampYM{2018}{03}
+% \begin{Detail}
+% \SubBulletItem
+% Applied patches for community reported bug and adjust parameters for better balance.
+% \SubBulletItem
+% Communicated with active players on discord channels to collect critiques and ideas for improvement.
+% \end{Detail}
+
+
 % \BigGap
 % \Entry
 % \href{https://github.com/xxf1995/VRGame}
-% {\textbf{Zombie Forest}},
-%
+% {\textbf{Zombie Forest}}
+
 % \Gap
 % \BulletItem
-% Game Design
+% Contributor
 % \hfill
-% \DatestampYM{2016}{04}
+% \DatestampYM{2016}{6} --
+% \DatestampYM{2016}{6} --
 % \begin{Detail}
 % \SubBulletItem
-% Made a VR zombie survival game with Unity engine and Oculus Rift in a group of four at CarlHack 2016.
-\BigGap
-\Entry
-\href{https://github.com/xxf1995/VRGame}
-{\textbf{Zombie Forest}}
-\newline
-(VR Game Made with Unity and Oculus DK2)
+% Learned basics of Unity and Oculus SDK and built the game from scratch in 36 hours at CarlHack 2016.
+% \SubBulletItem
+% Designed the basic gameplay and AI logic, implemented how player character interact with the map.
+% \end{Detail}
 
-\Gap
-\BulletItem
-Contributor
-\hfill
-\DatestampYM{2017}{07} --
-Present
-\begin{Detail}
-\SubBulletItem
-Learned basics of Unity and Oculus SDK and built the game from scratch in 36 hours at CarlHack 2016.
-\SubBulletItem
-Designed the basic gameplay and AI logic, implemented how player character interact with the map.
-\end{Detail}
 
 %%%%%%%%%%%%%%%%%%%%%
 %%Technical SKILLS %%
@@ -270,18 +309,23 @@ Designed the basic gameplay and AI logic, implemented how player character inter
 {PDF:Technical Skills}
 
 \BulletItem
-Programming Languages: Proficiency in Python, Java, Javascript, C
+Programming Languages: Proficiency in Golang, Python, Java, Javascript, C
 
 \Gap
 \BulletItem
-Web Frameworks: LAMP stack, Bootstrap, Spring MVC, Django, Flask, PostgreSQL, MySQL, AWS, RESTful API, Selenium, VueJS, PhantomJS, React, NodeJS
+Frameworks: VueJS, Bulma, LAMP, GraphQL, Selenium, Webpack, NodeJS, PhantomJS, React, Django, ELK, Splunk
 
 \Gap
 \BulletItem
-Platforms: tvOS, iOS, macOS, Windows, Ubuntu, CentOS, Amazon Linux AMI
+Platforms \& Tools: Ubuntu, Docker, FFMPEG, Nvidia CUDA, MongoDB, MySQL, Redis
 
 \Gap
 \BulletItem
-Machine Learning \& Deep Learning: Scikit Learn, OpenGL, Theano, tvOS, DNN, Matplotlib, Scipy, Numpy, Pandas, Keras
+Proficient AWS Services: S3, SQS, EC2, Lambda, API Gateway, Auto Scaling Group, Cloudfront, Route 53, CodePipeline, CodeBuild, CodeDeploy, Elastic Beanstalk
 
+\Gap
+\BulletItem
+Machine Learning \& Deep Learning: Scikit Learn, OpenGL, Theano, Matplotlib, Scipy, Numpy, Pandas, Keras, Jupyter
+
+\end{Body}
 \end{document}
