@@ -124,9 +124,15 @@ Software Engineer
 Present
 \begin{Detail}
 \SubBulletItem
-Develop various defense logic to protect Airbnb users from fraudsters.
+Developed a machine learning model on millions rows of data to tackle down the fake review problem at Airbnb with Sklearn and Pandas, cutting the volume of fake reviews to 1\% of the peak volume and prevented 2 million loss in coupon and credits.
 \SubBulletItem
-Build data foundation infrastructure to provide signals to detect potential fraud.
+Trained a machine learning model on millions rows of data to produce generic risk score with Sklearn and Pandas, evaluating the overall risk of users on Airbnb especially on Airbnb hosts, similar to Alipay's Zhima/Seasame score.
+\SubBulletItem
+Collaborated with team to launch the delayed payout policy which delays the payout of risky Airbnb hosts, prevented 60\% of fradulent payouts being made and hence in an estimated 10 mmillion in annual savings.
+\SubBulletItem
+Built a java service which provides downstream service with risk signals easily from a single source of truth wihout having to dive into hundreds of services and APIs using Redis, Hive, and Apache Kafka.
+\SubBulletItem
+Designed and Implemented a scoring java service which produces risk score of certain events and senario supporting 6 downstream consumers using Redis, Hive, and Apache Kafka.
 \end{Detail}
 
 \BigGap
@@ -190,35 +196,35 @@ Deployed a Jupyterhub system on an AWS P2 instance to facilitate team's research
 %% Projects %%
 %%%%%%%%%%%%%%
 
-\Section
-{Projects}
-{Projects}
-{PDF:Projects}
+% \Section
+% {Projects}
+% {Projects}
+% {PDF:Projects}
 
-\Entry
-\href{https://github.com/xingfanxia/comps_ediscovery}
-{\textbf{Tree Discovery}}
-% \newline
-% (An implementation of the Random Forest Algorithm)
-\Gap
-\BulletItem
-Lead
-\hfill
-\DatestampYM{2017}{10} --
-\DatestampYM{2018}{05}
+% \Entry
+% \href{https://github.com/xingfanxia/comps_ediscovery}
+% {\textbf{Tree Discovery}}
+% % \newline
+% % (An implementation of the Random Forest Algorithm)
+% \Gap
+% \BulletItem
+% Lead
+% \hfill
+% \DatestampYM{2017}{10} --
+% \DatestampYM{2018}{05}
 
-\begin{Detail}
-\SubBulletItem
-Implemented the Random Forest Algorithm from scratch in Python with a team of 6.
-\SubBulletItem
-Processed the raw and messy ENRON email dataset into a usable training set and test set with TF-IDF, DB-SCAN, and LSA topic aggregation.
+% \begin{Detail}
 % \SubBulletItem
-% Reduced the training speed of a typical tree from 2 minutes down to less than 10 seconds.
-\SubBulletItem
-Tested the performance of the implementation against the ENRON dataset, our F1 Score is comparable to the results presented at TREC Conference 2011.
-\SubBulletItem
-Designed and built a demo e-discovery product that utilizes the idea of semi-supervised learning, allow users to tag relevant documents as training set in each iteration of predictions to continuously improve the model's accuracy and recall.
-\end{Detail}
+% Implemented the Random Forest Algorithm from scratch in Python with a team of 6.
+% \SubBulletItem
+% Processed the raw and messy ENRON email dataset into a usable training set and test set with TF-IDF, DB-SCAN, and LSA topic aggregation.
+% % \SubBulletItem
+% % Reduced the training speed of a typical tree from 2 minutes down to less than 10 seconds.
+% \SubBulletItem
+% Tested the performance of the implementation against the ENRON dataset, our F1 Score is comparable to the results presented at TREC Conference 2011.
+% \SubBulletItem
+% Designed and built a demo e-discovery product that utilizes the idea of semi-supervised learning, allow users to tag relevant documents as training set in each iteration of predictions to continuously improve the model's accuracy and recall.
+% \end{Detail}
 
 % \BigGap
 % \Entry
@@ -309,15 +315,15 @@ Designed and built a demo e-discovery product that utilizes the idea of semi-sup
 {PDF:Technical Skills}
 
 \BulletItem
-Programming Languages: Proficiency in Golang, Python, Java, Javascript, C
+Programming Languages: Proficiency in Golang, Python, Java, Javascript, Scala, C
 
 \Gap
 \BulletItem
-Frameworks: VueJS, Bulma, LAMP, GraphQL, Selenium, Webpack, NodeJS, PhantomJS, React, Django, ELK, Splunk
+Frameworks: VueJS, Bulma, LAMP, GraphQL, Selenium, Webpack, NodeJS, PhantomJS, React, Django, ELK, Splunk, Apache Spark, Apache Kafka
 
 \Gap
 \BulletItem
-Platforms \& Tools: Ubuntu, Docker, FFMPEG, Nvidia CUDA, MongoDB, MySQL, Redis
+Tools \& Tools: Ubuntu, Docker, FFMPEG, Nvidia CUDA, MongoDB, MySQL, Redis, Hive, HDFS, Presto
 
 \Gap
 \BulletItem
