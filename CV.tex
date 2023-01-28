@@ -61,8 +61,8 @@ breaklinks}
 \Title{\CVAuthor}
 
 \begin{SubTitle}
-\href{https://www.google.com/maps/place/888+N+San+Mateo+Dr,+San+Mateo,+CA+94401}
-{888 N Santeo Dr., San Mateo CA 94401}
+\href{https://www.google.com/maps/place/8502+134th+Ct+NE,+Redmond,+WA+98052}
+{8502 134th Ct NE, Redmond, WA 98052}
 \par
 \href{mailto:xingfanxia@gmail.com}
 {xingfanxia@gmail.com}
@@ -96,11 +96,6 @@ B.A. in
 {Computer Science}
 \hfill
 Graduated \DatestampYM{2018}{06}
-\begin{Detail}
-\SubBulletItem
-Related Course Works: Human-centered Computing, Operating Systems, Database Systems, Computer Graphics, Software Design, Programming Languages, Computability and Complexity, Coding Theory, Computer Sound
-
-\end{Detail}
 
 %%%%%%%%%%%%%%%%%%%%%
 %% WORK EXPERIENCE %%
@@ -113,7 +108,35 @@ Experience}
 {PDF:WorkExperience}
 
 \Entry
-\href{https://press.airbnb.com/about-us/}
+\href{https://aws.amazon.com/athena/}
+{\textbf{Amazon Web Service -- Athena}},
+Redmond, WA
+
+\Gap
+\BulletItem
+Software Engineer
+\hfill
+\DatestampYM{2022}{4} --
+Present
+\begin{Detail}
+\SubBulletItem
+\textbf{Building the next-gen storage infrastructure for large scale distributed systems with billions of rows and terabytes of data, improving performance of AIML and other big data analytics applications.}
+\SubBulletItem Tech Stack: Java, Python, Spark, Iceberg, AWS Services(Athena, S3, CodePipeline, CodeBuild, Cloudwatch, etc.)
+\SubBulletItem
+Implemented custom table redirection handling mechanism for Iceberg tables in internal Athena fork of Trino query engine and enabled exclusive CTAS(Create Table As Select) feature for Iceberg Tables. Pushed the release of Iceberg Table GA Preview for Athena query engine at RE:INVENT 2022 and millions of CTAS queries being executed since the GA announcement.
+\SubBulletItem
+Overhauled the existing Hive JSON Serde library from an outdated open-source fork. Improved the query execution performance by up to 30\% and mitigated type casting compatibility issues.
+\SubBulletItem
+Improved the Athena Engine release pipeline with automation and Slack notifications, which saved 20\% of engineering hours dedicated to maintaining and monitoring the deployment.
+\SubBulletItem
+mplemented a virtualized table connector on top of the Iceberg table connector so users can leverage the performance of the Iceberg table engine to access other table formats, such as Governed Table with scalability issues. This improved the query execution speed to these table formats by approximately 40\%, avoided congestion, and is projected to save 4 million in hardware costs.
+\SubBulletItem
+Worked on a cross-team endeavor to overhaul the query routing logic from Athena engine to multiple external services, reduced excessive retry behaviors and reduced service congestion by up to 32\%.
+\end{Detail}
+
+\BigGap
+\Entry
+\href{https://www.apple.com/}
 {\textbf{Apple}},
 Cupertino, CA
 
@@ -122,20 +145,23 @@ Cupertino, CA
 Machine Learning Engineer
 \hfill
 \DatestampYM{2020}{8} --
-Present
+\DatestampYM{2022}{4}
 \begin{Detail}
 \SubBulletItem
-Contributed to on-device user profiling framework which consists of several models to predict users' overall interest and preferences.
+\textbf{Improving users' experience with proactive AI assistant on iOS, macOS, watchOS, tvOS.}
+\SubBulletItem Tech Stack: Python, Objective-C, Sklearn Kit, Pytorch, Airflow, Hive, Presto, Spark
 \SubBulletItem
-Built listener services to collect feedback and loggings to better track engagement of suggestions and prediction provided.
+Implemented an on-device user profiling framework which consists of several models to predict users' overall interest and preferences as a upstream service which provides signal to downstream consumers like Apple Map, Apple News, etc.
 \SubBulletItem
-Improved the current location model using more diverse data sources with better filtering and data sanitation.
+Built listener services to collect feedback and loggings to better track user engagement rate of suggestions and prediction provided.
 \SubBulletItem
-Overhauled the topic prediction model with more up to date data source and sanitized features.
+Improved the on-device location model using more diverse data sources with better filtering and data sanitation, increased user engagement rate by 9\%.
 \SubBulletItem
-Developed an automatic machine learning pipeline which retrains models with data source updates, launches experiments A/B testing the models, and deploys if a specified improvement is observed.
+Overhauled the topic prediction model with more up to date data source and sanitized features, increased user engagement rate by 11\%.
 \SubBulletItem
-Working on action prediction features which predicts what a user intends to do at a particular time and location based on various signals and models.
+Developed an automatic machine learning pipeline which retrains models with data source updates, launches experiments A/B testing the models, and deploys if a specified improvement is observed, saving engineering hours across the team.
+\SubBulletItem
+Worked on action prediction service which predicts user intention at a particular time and location by aggregating various signals from multiple models input which is used in Siri Suggestions and Siri Shortcuts.
 \end{Detail}
 
 \BigGap
@@ -152,6 +178,9 @@ Software Engineer
 \DatestampYM{2020}{8}
 \begin{Detail}
 \SubBulletItem
+\textbf{Fighting financial fraud with machin learning models and rule based engine.}
+\SubBulletItem Tech Stack: Python, Java, Scala, Sklearn Kit, Airflow, Hive, Presto, Spark
+\SubBulletItem
 Developed a machine learning model on millions rows of data to tackle down the fake review problem at Airbnb with Sklearn and Pandas, cutting the volume of fake reviews to 1\% of the peak volume and prevented 2 million loss in coupon and credits.
 \SubBulletItem
 Trained a machine learning model on millions rows of data to produce generic risk score with Sklearn and Pandas, evaluating the overall risk of users on Airbnb especially on Airbnb hosts, similar to Alipay's Zhima/Seasame score.
@@ -163,6 +192,7 @@ Built a java service which provides downstream service with risk signals easily 
 Designed and Implemented a scoring java service which produces risk score of certain event and senario supporting 6 downstream consumers using Redis, Hive, and Apache Kafka.
 \end{Detail}
 
+\newpage
 \BigGap
 \Entry
 \href{https://lino.network/}
@@ -177,10 +207,12 @@ Software Engineer
 \DatestampYM{2018}{10}
 
 % \newline
-% (Platform \& Infrastructure)
+% Building a decentrailized video and live streaming platform.
 \begin{Detail}
+\SubBulletItem \textbf{Building a decentrailized video and live streaming platform.}
+\SubBulletItem Tech Stack: Python, Golang, Javascript, VueJS, Splunk, ELK, AWS(S3, Kinesis, Lambda, Route53, Cloudfront, CodePipeline, CodeBuild, CodeDeploy, Elastic Beanstalk)
 \SubBulletItem
-Performed a major upgrade of DLive, largest live streaming DApp on Blockchain; implemented a twitch-like chatting experience with VueJS, GraphQL, and Web Socket. Dramatically increased user retention rate by 150\% and average daily session length by 350 \%.
+Performed a major upgrade of DLive, largest live streaming DApp on Blockchain; implemented a twitch-like chatting experience with Javascript, VueJS, GraphQL, and Web Socket. Dramatically increased user retention rate by 150\% and average daily session length by 350 \%.
 \SubBulletItem
 Architected and developed a video platform that includes ingest, transcoding, and distribution of video files in Golang with AWS S3, SQS, and Cloudfront from scratch. Serving terabytes of video content in different qualities globally.
 \SubBulletItem
@@ -341,23 +373,15 @@ Designed and implemented data pipeline at Lino from scratch to monitor user beha
 {PDF:Technical Skills}
 
 \BulletItem
-Programming Languages: Proficiency in Golang, Python, Java, Javascript, Scala, C, Objective-C
+Programming Languages: Proficiency in Python, Java, Golang, Javascript, Scala, Objective-C
 
 \Gap
 \BulletItem
-Frameworks: VueJS, Bulma, LAMP, GraphQL, NodeJS, React, Django, ELK, Splunk, Apache Spark, Apache Kafka
+Experienced AWS Services: Athena, S3, SQS, EC2, Lambda, API Gateway, Auto Scaling Group, Cloudfront, Route 53, CodePipeline, CodeBuild, CodeDeploy, Kinesis
 
 \Gap
 \BulletItem
-Tools: Ubuntu, Docker, FFMPEG, Nvidia CUDA, MongoDB, MySQL, Redis, Hive, HDFS, Presto
-
-\Gap
-\BulletItem
-Proficient AWS Services: S3, SQS, EC2, Lambda, API Gateway, Auto Scaling Group, Cloudfront, Route 53, CodePipeline, CodeBuild, CodeDeploy, Elastic Beanstalk
-
-\Gap
-\BulletItem
-Machine Learning \& Deep Learning: Scikit Learn, OpenGL, Theano, Matplotlib, Scipy, Numpy, Pandas, Keras, Jupyter, Private Federated Learning
+Machine Learning \& Data Engineering: Scikit Learn, OpenCV, Pytorch, Matplotlib, Scipy, Numpy, Pandas, ELK, Apache Iceberg, Apache Spark, Apache Kafka, Airflow
 
 \end{Body}
 \end{document}
