@@ -12,7 +12,7 @@
 
 % See "README.md" for instructions on compiling this document.
 
-\documentclass[letterpaper,MMMyyyy,nonstopmode]{simpleresumecv}
+\documentclass[a4paper,MMMyyyy,nonstopmode]{simpleresumecv}
 % Class options:
 % a4paper, letterpaper, nonstopmode, draftmode
 % MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
@@ -74,29 +74,6 @@ breaklinks}
 \end{SubTitle}
 
 \begin{Body}
-
-%%%%%%%%%%%%%%%
-%% EDUCATION %%
-%%%%%%%%%%%%%%%
-
-\Section
-{Education}
-{Education}
-{PDF:Education}
-
-\Entry
-\href{https://www.carleton.edu/}
-{\textbf{Carleton College}},
-Northfield, Minnesota
-
-\Gap
-\BulletItem
-B.A. in
-\href{https://apps.carleton.edu/curricular/cs/}
-{Computer Science}
-\hfill
-Graduated \DatestampYM{2018}{06}
-
 %%%%%%%%%%%%%%%%%%%%%
 %% WORK EXPERIENCE %%
 %%%%%%%%%%%%%%%%%%%%%
@@ -121,15 +98,14 @@ Present
 \begin{Detail}
 \SubBulletItem
 \textbf{Building the next-gen storage infrastructure for large scale distributed systems with billions of rows and terabytes of data, improving performance of AIML and other big data analytics applications.}
-\SubBulletItem Tech Stack: Java, Python, Spark, Iceberg, AWS Services(Athena, S3, CodePipeline, CodeBuild, Cloudwatch, etc.)
+\SubBulletItem \textbf{Tech Stack: Java, Python, Spark, Iceberg, AWS Services(S3, CodePipeline, CodeBuild, Cloudwatch, etc.)}
 \SubBulletItem
-Implemented custom table redirection handling mechanism for Iceberg tables in internal Athena fork of Trino query engine and enabled exclusive CTAS(Create Table As Select) feature for Iceberg Tables. Pushed the release of Iceberg Table GA Preview for Athena query engine at RE:INVENT 2022 and millions of CTAS queries being executed since the GA announcement.
+Implemented CTAS(Create Table As Select) feature for Iceberg Tables in Athena query engine. Relesed Iceberg Table GA Preview RE:INVENT 2022 and millions of CTAS queries being executed since the release.
 \SubBulletItem
-Overhauled the existing Hive JSON Serde library from an outdated open-source fork. Improved the query execution performance by up to 30\% and mitigated type casting compatibility issues.
+Overhauled the existing Hive JSON Serde library, improved the query execution performance by up to 30\% and mitigated type casting compatibility issues.
 \SubBulletItem
-Improved the Athena Engine release pipeline with automation and Slack notifications, which saved 20\% of engineering hours dedicated to maintaining and monitoring the deployment.
-\SubBulletItem
-mplemented a virtualized table connector on top of the Iceberg table connector so users can leverage the performance of the Iceberg table engine to access other table formats, such as Governed Table with scalability issues. This improved the query execution speed to these table formats by approximately 40\%, avoided congestion, and is projected to save 4 million in hardware costs.
+Implemented a virtualized table connector on top of the Iceberg table connector so users can leverage the performance of the Iceberg table engine to access other table formats with limited scalability. 
+Improved the query execution speed of these table formats by approximately 40\%, avoided congestion, and is projected to save 4 million in hardware costs per year.
 \SubBulletItem
 Worked on a cross-team endeavor to overhaul the query routing logic from Athena engine to multiple external services, reduced excessive retry behaviors and reduced service congestion by up to 32\%.
 \end{Detail}
@@ -149,15 +125,13 @@ Machine Learning Engineer
 \begin{Detail}
 \SubBulletItem
 \textbf{Improving users' experience with proactive AI assistant on iOS, macOS, watchOS, tvOS.}
-\SubBulletItem Tech Stack: Python, Objective-C, Sklearn Kit, Pytorch, Airflow, Hive, Presto, Spark
+\SubBulletItem \textbf{Tech Stack: Python, Objective-C, Sklearn Kit, Pytorch, Airflow, Hive, Presto, Spark}
 \SubBulletItem
-Implemented an on-device user profiling framework which consists of several models to predict users' overall interest and preferences as a upstream service which provides signal to downstream consumers like Apple Map, Apple News, etc.
+Implemented an on-device user profiling framework which consists of several models to predict users' overall interest and preferences as a upstream service which provides signal to downstream consumers like Apple Map, Apple News.
 \SubBulletItem
-Built listener services to collect feedback and loggings to better track user engagement rate of suggestions and prediction provided.
+Improved the on-device location model with 4 times of training data and better engineered aggregated features, increased user engagement rate by 9\%.
 \SubBulletItem
-Improved the on-device location model using more diverse data sources with better filtering and data sanitation, increased user engagement rate by 9\%.
-\SubBulletItem
-Overhauled the topic prediction model with more up to date data source and sanitized features, increased user engagement rate by 11\%.
+Overhauled the topic prediction model leveraging transformer based model BERT, increased topic prediction accurarcy by 14\% and user engagement rate by 11\%.
 \SubBulletItem
 Developed an automatic machine learning pipeline which retrains models with data source updates, launches experiments A/B testing the models, and deploys if a specified improvement is observed, saving engineering hours across the team.
 \SubBulletItem
@@ -179,20 +153,19 @@ Software Engineer
 \begin{Detail}
 \SubBulletItem
 \textbf{Fighting financial fraud with machin learning models and rule based engine.}
-\SubBulletItem Tech Stack: Python, Java, Scala, Sklearn Kit, Airflow, Hive, Presto, Spark
+\SubBulletItem \textbf{Tech Stack: Python, Java, Scala, Sklearn Kit, Airflow, Hive, Presto, Spark}
 \SubBulletItem
-Developed a machine learning model on millions rows of data to tackle down the fake review problem at Airbnb with Sklearn and Pandas, cutting the volume of fake reviews to 1\% of the peak volume and prevented 2 million loss in coupon and credits.
+Developed a machine learning model on millions rows of data to tackle down the fake review problem at Airbnb with Sklearn and Pandas, cutting the volume of fake reviews to 1\% of the peak volume and prevented 2 million loss.
 \SubBulletItem
 Trained a machine learning model on millions rows of data to produce generic risk score with Sklearn and Pandas, evaluating the overall risk of users on Airbnb especially on Airbnb hosts, similar to Alipay's Zhima/Seasame score.
 \SubBulletItem
 Collaborated with team to launch the delayed payout policy which delays the payout of risky Airbnb hosts, prevented 60\% of fradulent payouts being made and hence in an estimated 10 mmillion in annual savings.
 \SubBulletItem
-Built a java service which provides downstream service with risk signals easily from a single source of truth wihout having to dive into hundreds of services and APIs using Redis, Hive, and Apache Kafka.
+Built a java microservice which provides downstream services with consolidated risk signals using Redis, Hive, and Kafka.
 \SubBulletItem
-Designed and Implemented a scoring java service which produces risk score of certain event and senario supporting 6 downstream consumers using Redis, Hive, and Apache Kafka.
+Designed and Implemented a scoring java service which produces risk score of certain event and senario supporting 6 downstream consumers using Redis, Hive, and Kafka.
 \end{Detail}
 
-\newpage
 \BigGap
 \Entry
 \href{https://lino.network/}
@@ -201,7 +174,7 @@ Cupertino, CA
 
 \Gap
 \BulletItem
-Software Engineer
+Founding Engineer
 \hfill
 \DatestampYM{2018}{03} --
 \DatestampYM{2018}{10}
@@ -209,20 +182,12 @@ Software Engineer
 % \newline
 % Building a decentrailized video and live streaming platform.
 \begin{Detail}
-\SubBulletItem \textbf{Building a decentrailized video and live streaming platform.}
-\SubBulletItem Tech Stack: Python, Golang, Javascript, VueJS, Splunk, ELK, AWS(S3, Kinesis, Lambda, Route53, Cloudfront, CodePipeline, CodeBuild, CodeDeploy, Elastic Beanstalk)
+\SubBulletItem \textbf{Building a decentrailized video and live streaming platform -- Dlive.}
+\SubBulletItem \textbf{Tech Stack: Python, Golang, Javascript, VueJS, Splunk, ELK, AWS(S3, Kinesis, Lambda, Route53, etc)}
+\SubBulletItem 
+Built Dlive's front end website, video transcoding/storage/distribution service, and metrics data pipeline from scratch.
 \SubBulletItem
-Performed a major upgrade of DLive, largest live streaming DApp on Blockchain; implemented a twitch-like chatting experience with Javascript, VueJS, GraphQL, and Web Socket. Dramatically increased user retention rate by 150\% and average daily session length by 350 \%.
-\SubBulletItem
-Architected and developed a video platform that includes ingest, transcoding, and distribution of video files in Golang with AWS S3, SQS, and Cloudfront from scratch. Serving terabytes of video content in different qualities globally.
-\SubBulletItem
-Built GPU-accelerated transcoding cluster for the video platform in Golang with FFMPEG and Nvidia CUDA. Increased transcoding efficiency by 15 times and expanded the supported video formats and codecs.
-\SubBulletItem
-Improved users' experience uploading video by deploying video ingest service in 7 major regions of the world to reduce uploading wait time and the possibility of transfer errors with AWS API Gateway and AWS Lambda.
-\SubBulletItem
-Secured content on the DLive platform by implementing signed-cookie protection on AWS Clooudfront in Python to defend third-party malicious attack.
-\SubBulletItem
-Designed and implemented data pipeline at Lino from scratch to monitor user behaviors, user QoE metrics, and streaming service robustness with AWS Kinesis, AWS Lambda, ELK Stack, and Splunk. Performed real-time analytics of gigabytes of logs from users and aggregated into comprehensive reports and dashboards that provides both technical and business insides.
+Secured \$20 million in funding through a private token sale led by ZhenFund and exited selling Dlive to Bittorrent.
 \end{Detail}
 
 % \BigGap
@@ -362,6 +327,27 @@ Designed and implemented data pipeline at Lino from scratch to monitor user beha
 % Designed the basic gameplay and AI logic, implemented how player character interact with the map.
 % \end{Detail}
 
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\Section
+{Education}
+{Education}
+{PDF:Education}
+
+\Entry
+\href{https://www.carleton.edu/}
+{\textbf{Carleton College}},
+Northfield, Minnesota
+
+\Gap
+\BulletItem
+B.A. in
+\href{https://apps.carleton.edu/curricular/cs/}
+{Computer Science}
+\hfill
+Graduated \DatestampYM{2018}{06}
 
 %%%%%%%%%%%%%%%%%%%%%
 %%Technical SKILLS %%

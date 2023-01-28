@@ -73,10 +73,12 @@
 
 % Geometry package for page margins.
 \RequirePackage[
-left=0.70in,
-right=0.70in,
+letterpaper, 
+total={8in, 10in},
+left=0.60in,
+right=0.60in,
 top=0.60in,
-bottom=0.45in,
+bottom=0.35in,
 nohead,
 includefoot]{geometry}
 
