@@ -102,7 +102,7 @@ Present
 \SubBulletItem
 Implemented CTAS(Create Table As Select) feature for Iceberg Tables in Athena query engine. Released Iceberg Table GA Preview RE:INVENT 2022 and millions of CTAS queries being executed since the release.
 \SubBulletItem
-Overhauled the existing Hive JSON Serde library, improved the query execution performance by up to 30\%, and mitigated type casting compatibility issues.
+Overhauled the existing Hive JSON Serde library, improved the query execution performance by up to 30\%, and fixed non deterministic query results, reduced related ops tickets by 60\%.
 \SubBulletItem
 Implemented a virtualized table connector on top of the Iceberg table connector so users can leverage the performance of the Iceberg table engine to access other table formats with limited scalability. 
 Improved the query execution speed of these table formats by approximately 40\%, avoided congestion, and is projected to save 4 million in hardware costs per year.
