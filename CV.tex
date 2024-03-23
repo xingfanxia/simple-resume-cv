@@ -25,7 +25,7 @@
 \newcommand{\CVAuthor}{Xingfan Xia}
 \newcommand{\CVTitle}{Xingfan's CV}
 \newcommand{\CVNote}{CV compiled on {\today}}
-\newcommand{\CVWebpage}{https://xiax.dev}
+\newcommand{\CVWebpage}{https://xiax.xyz}
 
 % PDF settings and properties.
 \hypersetup{
@@ -129,9 +129,9 @@ Machine Learning Engineer
 \SubBulletItem
 Implemented an on-device user profiling framework that consists of several models to predict users' overall interest and preferences as an upstream service that provides signals to downstream consumers like Apple Map, and Apple News.
 \SubBulletItem
-Improved the on-device location model with 4 times of training data and better engineered aggregated features, increased user engagement rate by 9\%.
+Improved the on-device location model with 4 times of training data and better engineered aggregated features, increased user engagement rate by 9\%. Also redesigned the model inference logic on device to reduce latency by up to 22\%.
 \SubBulletItem
-Overhauled the topic prediction model leveraging transformer-based model BERT, increased topic prediction accuracy by 14\% and user engagement rate by 11\%.
+Overhauled the topic prediction model leveraging transformer-based model BERT, increased topic prediction accuracy by 14\% and user engagement rate by 11\%. Also improved the inference pipeline to reduce latency by up to 12\%.
 \SubBulletItem
 Developed an automatic machine learning pipeline that retrains models with data source updates, launches A/B testing experiments, and deploys new models if a specified improvement is observed, saving engineering hours across the team.
 \SubBulletItem
@@ -155,15 +155,15 @@ Software Engineer
 \textbf{Fighting financial fraud with machine learning models and rule-based engine.}
 \SubBulletItem \textbf{Tech Stack: Python, Java, Scala, Sklearn Kit, Airflow, Hive, Presto, Spark}
 \SubBulletItem
-Developed a machine learning model to tackle the fake review problem at Airbnb with Sklearn and Pandas, cutting the volume of fake reviews to 1\% of the peak volume and preventing 2 million losses.
+Developed various models(XGBoost and logistic regression) to tackle the fake review problem at Airbnb, cutting the volume of fake reviews to 1\% of the peak volume and preventing 2 million losses. Also deployed it with a new inference mechanism, improve inference performance by 30\%.
 \SubBulletItem
-Trained a machine learning model to produce a comprehensive risk score with Sklearn and Pandas, evaluating the overall risk of users on Airbnb, especially on Airbnb hosts, similar to Alipay's Zhima/Seasame score.
+Trained a logistic regression model to produce a comprehensive risk score with Sklearn, evaluating the overall risk of users on Airbnb, especially on Airbnb hosts, similar to Alipay's Zhima/Seasame score.
 \SubBulletItem
-Collaborated with team to launch the delayed payout policy which delays the payout of risky Airbnb hosts, prevented 60\% of fraudulent payouts being made and hence in an estimated 10 million in annual savings.
+Rolled out a new policy that delays the payout of risky Airbnb hosts, prevented 60\% of fraudulent payouts being made and hence in an estimated 10 million in annual savings.
 \SubBulletItem
-Built a java microservice that provides downstream services with consolidated risk signals using Redis, Hive, and Kafka.
+Built a Java microservice that provides downstream services with consolidated risk signals using Redis, Hive, and Kafka.
 \SubBulletItem
-Designed and Implemented a scoring java service that produces risk scores of certain events and scenarios supporting multiple downstream consumers using Redis, Hive, and Kafka.
+Designed and Implemented a scoring Java service that produces risk scores of certain events and scenarios supporting multiple downstream consumers using Redis, Hive, and Kafka.
 \end{Detail}
 
 \BigGap
